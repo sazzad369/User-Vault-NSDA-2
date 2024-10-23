@@ -11,6 +11,7 @@
     app:cardBackgroundColor="#0933C7">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/gradient_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
@@ -19,7 +20,7 @@
             android:id="@+id/appNameTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ProfileHub"
+            android:text="UserVault"
             android:textSize="24sp"
             android:textColor="#F0EBEC"
             android:textStyle="bold"

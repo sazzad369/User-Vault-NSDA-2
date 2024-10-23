@@ -8,20 +8,20 @@
     app:cardElevation="15dp"
     app:cardCornerRadius="15dp"
     android:layout_margin="30dp"
-    android:background="#6FD185"
+    android:background="@drawable/gradient_background"
     tools:context=".ProfileDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#71CA4E"
+        android:background="@drawable/gradient_background"
         android:orientation="vertical"
         android:padding="16dp">
 
         <ImageView
             android:id="@+id/logoImageView"
-            android:layout_width="289dp"
-            android:layout_height="264dp"
+            android:layout_width="266dp"
+            android:layout_height="238dp"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
             android:src="@drawable/logouser" />
@@ -33,7 +33,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:fontFamily="serif"
-            android:text="ProfileHub"
+            android:text="User Vault"
             android:textSize="24sp"
             android:textStyle="bold" />
 
