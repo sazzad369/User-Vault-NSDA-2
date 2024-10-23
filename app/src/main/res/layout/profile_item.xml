@@ -8,10 +8,10 @@
     android:layout_marginHorizontal="10dp"
     app:cardElevation="10dp"
     app:cardCornerRadius="20dp"
-    app:cardBackgroundColor="#0933C7">
+    app:cardBackgroundColor="@color/basic">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/gradient_background"
+        android:background="@color/purple"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">

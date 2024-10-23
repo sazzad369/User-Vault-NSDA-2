@@ -1,106 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:cardElevation="15dp"
-    app:cardCornerRadius="15dp"
-    android:layout_margin="30dp"
-    tools:context=".UpdateProfileActivity">
+    android:background="@drawable/loginbkg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/gradient_background"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/custom_edittext"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
 
-        <ImageView
-            android:id="@+id/logoImageView"
-            android:layout_width="282dp"
-            android:layout_height="174dp"
-            android:layout_gravity="center"
-            android:src="@drawable/logouser"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/appNameTxt"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:background="@color/basic"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="serif"
-            android:text="Uservault"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logoImageView" />
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
 
-        <EditText
-            android:id="@+id/profileNameEt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Enter Profile Name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appNameTxt"/>
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UserVault"
+                android:textAlignment="textStart"
+                android:textColor="@color/purple"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update profile"
+                android:textAlignment="textStart"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/purple"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/profileEmailEt"
-            android:layout_width="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_height="wrap_content"
-            android:hint="Enter Profile Email"
-            app:layout_constraintEnd_toEndOf="@+id/profileNameEt"
-            app:layout_constraintStart_toStartOf="@+id/profileNameEt"
-            app:layout_constraintTop_toBottomOf="@+id/profileNameEt"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Please Add your profile with your information"
+                android:alpha="0.7"/>
 
-        <EditText
-            android:id="@+id/profileDOBEt"
-            android:layout_width="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_height="wrap_content"
-            android:hint="Enter Profile Date of Birth"
-            app:layout_constraintEnd_toEndOf="@+id/profileEmailEt"
-            app:layout_constraintStart_toStartOf="@+id/profileEmailEt"
-            app:layout_constraintTop_toBottomOf="@+id/profileEmailEt"/>
+            <EditText
+                android:id="@+id/profileNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/person"
+                android:drawablePadding="8dp"
+                android:hint="Enter your profile name"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
 
-        <EditText
-            android:id="@+id/profileDistrictEt"
-            android:layout_width="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_height="wrap_content"
-            android:hint="Enter Profile District"
-            app:layout_constraintEnd_toEndOf="@+id/profileDOBEt"
-            app:layout_constraintStart_toStartOf="@+id/profileDOBEt"
-            app:layout_constraintTop_toBottomOf="@+id/profileDOBEt"/>
+            <EditText
+                android:id="@+id/profileEmailEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="8dp"
+                android:hint="Enter your Email"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
 
-        <EditText
-            android:id="@+id/profilemobileEt"
-            android:layout_width="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_height="wrap_content"
-            android:hint="Enter Profile Mobile"
-            app:layout_constraintEnd_toEndOf="@+id/profileDistrictEt"
-            app:layout_constraintStart_toStartOf="@+id/profileDistrictEt"
-            app:layout_constraintTop_toBottomOf="@+id/profileDistrictEt"/>
+            <EditText
+                android:id="@+id/profileDOBEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/date"
+                android:drawablePadding="8dp"
+                android:hint="Enter your date of birth"
+                android:inputType="datetime"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
 
-        <Button
-            android:id="@+id/updateBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
-            android:text="UPDATE PROFILE"
-            app:layout_constraintEnd_toEndOf="@+id/profilemobileEt"
-            app:layout_constraintStart_toStartOf="@+id/profilemobileEt"
-            app:layout_constraintTop_toBottomOf="@+id/profilemobileEt"/>
+            <EditText
+                android:id="@+id/profileDistrictEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/location"
+                android:drawablePadding="8dp"
+                android:hint="Enter your District"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/profilemobileEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="8dp"
+                android:hint="Enter your Mobile"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
 
-</androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/updateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/purple"
+                android:text="Add Profile"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
